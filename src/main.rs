@@ -4,17 +4,22 @@ use std::fs;
 //use std::cmp;
 //
 mod day1;
-mod day2;
+mod day6;
 
 fn main() {
     // Read the input
-    let input = fs::read_to_string("./inputs/day2.txt").expect("Can't find inputs/day2.txt");
+    let input = 
+        fs::read_to_string(
+            "./inputs/day6.txt")
+                    .expect("Can't find inputs/day6.txt");
 
     // Let generator borrow the string
-    //let board = day2::generator(&str);
+    //let board = day6::generator(&str);
 
-    println!("Part 1: {}", crate::day2::day2::part1(&input));
-    println!("Part 2: {}", crate::day2::day2::part2(&input));
+    let generated = crate::day6::day6::generator(&input);
+
+    println!("Part 1: {:#?}", crate::day6::day6::part1(&generated));
+    println!("Part 2: {:#?}", crate::day6::day6::part2(&generated));
 
 }
 

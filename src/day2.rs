@@ -2,6 +2,10 @@
 pub mod day2 {
     use std::collections::HashMap;
 
+    pub fn generator(input: &String) -> &String {
+        input
+    }
+
     pub fn part1(input: &String) -> u32 {
         let winloss = HashMap::from([
             // Wins

@@ -23,6 +23,7 @@ pub mod day1 {
 
         // Sort in reverse order (normal sort is a.cmp(b)
         elves.sort_by(|a,b| b.cmp(a));
+        println!("{:#?}", elves);
         // "yield" elves
         elves
     }
